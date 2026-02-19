@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Multimedia Fusion Studio</title>
+
+  <!-- p5 Core -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="welcome-page">
+    <div class="welcome-content">
+      <h1>🎧 Welcome to Multimedia Fusion Studio</h1>
+      <p>Experience the ultimate interactive audio-visual journey</p>
+      <button id="enter-btn">Enter the Studio</button>
+    </div>
+  </div>
+
+  <div id="main-app" style="display: none;">
+    <div class="container">
+      <header>
+        <h1>🎧 Multimedia Fusion Studio</h1>
+        <p>Advanced Interactive Audio-Visual Experience</p>
+      </header>
+
+      <div class="controls">
+
+        <div class="upload-section">
+          <label class="upload-box">
+            Upload Audio
+            <input type="file" id="audioUpload" accept="audio/*" hidden>
+          </label> 
+
+          <label class="upload-box">
+            Upload Video
+            <input type="file" id="videoUpload" accept="video/*" hidden>
+          </label>
+
+          <label class="upload-box">
+            Upload Photo
+            <input type="file" id="photoUpload" accept="image/*" hidden>
+          </label>
+        </div>
+
+        <p style="text-align: center; opacity: 0.8; margin: 10px 0;">SISI NI FIRE SI FIRE...HATUWEZI KUWA BILA PAWAA.</p>
+
+        <div class="player-controls">
+          <button id="prevBtn">⏮ Prev</button>
+          <button id="playBtn">▶ Play</button>
+          <button id="pauseBtn">⏸ Pause</button>
+          <button id="stopBtn">⏹ Stop</button>
+          <button id="nextBtn">⏭ Next</button>
+        </div>
+
+        <div class="sliders">
+          <label>Volume
+            <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.7">
+          </label>
+
+          <label>Speed
+            <input type="range" id="speedSlider" min="0.5" max="2" step="0.1" value="1">
+          </label>
+
+          <label>Zoom (Video/Photo)
+            <input type="range" id="zoomSlider" min="0.5" max="3" step="0.1" value="1">
+          </label>
+        </div>
+
+      </div>
+
+      <div id="canvas-container"></div>
+
+      <div id="playlist">
+        <h3>Playlist</h3>
+        <ul id="playlist-items"></ul>
+      </div>
+
+      <footer>
+        Built with p5.js | Responsive | Real-Time   @Ni mbayaaaa
+      </footer>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
